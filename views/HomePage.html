@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" href="Images/cropped-cavs2.gif">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <title>HOME PAGE</title>
+    <link rel=stylesheet type="text/css" href="MyCss/HomeStyle.css">
+    <link rel=stylesheet type="text/css" href="MyCss/Post.css">
+   
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/bower_components/jquery/dist/jquery.min.js"></script>
+  
+<script src="bower_components/pusher-angular/lib/pusher-angular.min.js"></script>
+<script src="bower_components/pusher-angular/lib/pusher-angular.js"></script>
+  
+  
+</head>
+
+<body ng-app="Forumapp">
+<div ng-controller="loginctrl">
+    <div class="header" id="myheader">
+
+        <a style="color: red ;font-size: 20pt"> <b><i>Consultant-Forum
+    </i></b></a>
+
+        <a href="#home" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'"><b>Home</b></a>
+        <a href="#news" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'"><b>Answer</b></a>
+        <a href="#Notification" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'"><b>Notification</b></a>
+        <!-- <a href="#logout" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">logout</a> -->
+        <input type=text placeholder="Search">
+        
+        <hr align="left" size="1" noshade>
+
+    </div>
+    <div class="sideMenu">
+        <ul>
+            <div class="sideMenuContent">
+                <li>
+                    <p>Questions</p>
+                </li>
+                <hr align="left" size="1" width="90">
+                <li><a href="#Questions For You" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'">Questions For You</a></li>
+                <li><a href="#Answer Request" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'">Answer Request</a></li>
+                <li><a href="#about" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'">Draft</a></li>
+            </div>
+        </ul>
+    </div>
+
+
+    <div class="main">
+     <div class="postWindow">  
+               
+         <h1 style="display:none;">Welcome<span id="postById"> {{result.data.uid}}</span></h1>
+         
+         <table>         <tr>      
+              <textarea id="post" placeholder=" {{result.data.uid}}  What's Your Question"  cols="70" rows="3" onclick="javascript:myBlurFunction(1);"></textarea></tr>
+              <div id="overlay"><input type="text" id="popup" placeholder="Start your Question with What How or Why" cols="56" rows="2"  autofocus><hr><input type="text" id="popupTxt" placeholder="Optional:image link" cols="56" rows="2"><button id="popupBtn" onclick="javascript:myBlurFunction(0);">Ask Question</button></div>
+        
+                <!-- <tr> -->
+                
+                    <!-- <textarea id="imgUrl" placeholder="image url" cols="70" rows="1"></textarea><a id="place_img" href="">Place Image url</a> -->
+             <!-- </tr> -->
+     <!-- <br><button class="" id="postBt"><a id="btnValue" href=#post>Post</a></button> -->
+         </table>
+        </div>
+        <div >
+          
+            <div class="Post_table">
+                
+                    <table cellspacing="20">
+        
+        
+                        <tbody id="posts" ng-controller="postctrl">
+                      {{post}}
+                        </tbody>
+                        
+                    </table>
+        
+                   
+                </div>
+        </div>
+       
+    </div>
+    </div>
+<form action="/logout">
+    <div class="footer"> <strong> <input type="submit" value="logout" style="border:none;background:none;float:right" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'"></strong></div>
+</form>
+
+<script src="Js/app.js"></script>
+<script src="Js/comments.js"></script>
+  <script src="Js/post.js"></script>
+  <script src="Js/crud.js"></script>
+
+ <script src="Js/loginController.js"></script>
+ <script src ="Js/postController.js"></script>
+ <script src="Js/message.js"></script>
+</body>
+
+</html>

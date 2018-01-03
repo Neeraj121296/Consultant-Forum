@@ -1,0 +1,87 @@
+ body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        
+        p.small {
+            line-height: 0.8;
+        }
+        
+        .line {
+            line-height: 2.3;
+        }
+        
+        .bg {
+            background-image: url("69031506-education-wallpapers.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .siteName {
+            position: absolute;
+            left: 100px;
+            top: 0px;
+            z-index: 1;
+            font-size: 15pt;
+            color: red;
+        }
+        
+        .subtitle {
+            position: absolute;
+            left: 100px;
+            top: 40px;
+            z-index: 1;
+        }
+        
+        .logo {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 1;
+        }
+        
+        .register {
+            position: absolute;
+            left: 10px;
+            top: 25%;
+            z-index: 1;
+        }
+        
+        .login {
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            z-index: 1;
+        }
+        
+        input[type=text]:focus {
+            border: 3px solid #555;
+        }
+        
+        input[type=text]:hover {
+            border: 3px solid #999;
+        }
+        
+        input[type=password]:focus {
+            border: 3px solid #555;
+        }
+        
+        input[type=password]:hover {
+            border: 3px solid #999;
+        }
+        
+        input[type=email]:hover {
+            border: 3px solid #999;
+        }
+        
+        input[type=submit] {
+            background-color: blue;
+            border: none;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
